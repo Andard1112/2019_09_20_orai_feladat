@@ -6,15 +6,17 @@ namespace github_proba
     {
         static void Main(string[] args)
         {
-            int[] tomb = new int[10];
+            Console.WriteLine("Kérem adja meg, hogy milyen hosszú legyen a tomb");
+            int meret = int.Parse(Console.ReadLine());
+            int[] tomb = new int[meret];
             int max = 0;
-            for (int i = 0; i < tomb.Length; i++)
+            for (int i = 0; i < meret; i++)
             {
                 Console.WriteLine("Kérem adja meg "+ (i+1)+" számot: ");
                 tomb[i] = int.Parse(Console.ReadLine());
-                if (max< i)
+                if (max< tomb[i])
                 {
-                    max = i;
+                    max = tomb[i];
                 }
             }
             Console.WriteLine("A legnagyobb szám:{0}",max);
